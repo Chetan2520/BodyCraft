@@ -1,0 +1,51 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 4rem;
+}   
+nav ul{
+    display: flex;
+    gap: 30px;
+    font-weight: 500;
+}
+nav li{
+    list-style: none;
+    cursor: pointer;
+}
+nav button{
+    background-color: #D01C28;
+    color: white;
+    width: 80px;
+    height: 31px;
+    padding: 3px 10px;
+
+
+}
+.heroSection{
+    padding: 1rem;
+    height: 38rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.hero-text{
+    width: 50%;
+}
+.hero-text h1{
+    font-size: 5rem;
+    font-weight: 500;
+}
+.hero-text h2{
+font-size: 2rem;
+font-weight: 100;
+}
+.hero-text p{
+    font-size: 1.2rem;
+}
