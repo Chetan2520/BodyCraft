@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import Button from './Button';
+import heroImg from './assets/hero-img.png'
 
 const HeroSection = () => {
   useEffect(() => {
@@ -34,7 +35,7 @@ const HeroSection = () => {
     <section id="home" className="relative overflow-hidden">
       <img
         className="w-full h-screen object-cover"
-        src="./src/assets/hero-img.png"
+        src={heroImg}
         alt="Hero Image"
       />
 

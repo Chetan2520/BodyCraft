@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import aboutImg from "./assets/about.jpg";
 const About = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -89,7 +89,7 @@ const About = () => {
           </p>
         </div>
         <div className="object-cover md:h-90">
-          <img className="about-img" src="./src/assets/about.jpg" alt="About" />
+          <img className="about-img" src={aboutImg} alt="About" />
         </div>
         <div className="text flex flex-col gap-4 justify-around md:w-80">
           <p className="text-xs p-4 rounded-2xl md:text-sm">

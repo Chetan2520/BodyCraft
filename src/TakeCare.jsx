@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import takeCareImg from "./assets/takeCareCanva2.png"
 const TakeCare = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -34,7 +34,7 @@ const TakeCare = () => {
   return (
     <div className="container h-screen text-white font-font px-12 py-20 flex flex-col gap-12 md:flex md:flex-row md:gap-0 md:py-20">
       <div className="w-68 takeCare-img">
-        <img className="md:max-w-2xl" src="./src/assets/takeCareCanva2.png" alt="Take Care" />
+        <img className="md:max-w-2xl" src={takeCareImg} alt="Take Care" />
       </div>
       <div className="takeCare-text md:px-16 md:py-20">
         <h1 className="text-3xl font-bold mb-4 md:text-4xl">

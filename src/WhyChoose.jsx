@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import Card2 from './assets/Card-2.jpg'
+import Card1 from './assets/Card-1.jpg'
+import Card3 from './assets/Card-3.jpg'
 const WhyChoose = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -84,14 +86,14 @@ const WhyChoose = () => {
       <div className="whyChoose-card flex flex-col gap-16 md:flex-row-reverse md:p-10">
         <div className="image-section flex flex-col gap-4 md:flex-row-reverse">
           <div className="img-long h-50 rounded-2xl overflow-hidden md:h-[21rem]">
-            <img className="md:h-[21rem] md:w-60 md:object-cover" src="./src/assets/Card-2.jpg" alt="Main" />
+            <img className="md:h-[21rem] md:w-60 md:object-cover" src={Card2} alt="Main" />
           </div>
           <div className="img-small flex gap-4 md:flex-col">
             <div className="img1">
-              <img className="h-40 w-30 object-cover rounded-2xl" src="./src/assets/Card-1.jpg" alt="Small 1" />
+              <img className="h-40 w-30 object-cover rounded-2xl" src={Card1} alt="Small 1" />
             </div>
             <div className="img2">
-              <img className="h-40 w-30 object-cover rounded-2xl" src="./src/assets/Card-3.jpg" alt="Small 2" />
+              <img className="h-40 w-30 object-cover rounded-2xl" src={Card3} alt="Small 2" />
             </div>
           </div>
         </div>

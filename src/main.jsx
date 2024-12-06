@@ -6,46 +6,28 @@ import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './Home.jsx';
 import WeightGain from './WeightGain.jsx';
-import ScrollToTop from './ScrolltoTop';
 import About from './About.jsx';
 import WeightLoss from './WeightLoss.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: (
-      <>
-        {/* <ScrollToTop /> */}
-        <App />
-      </>
-    ),
+    element: <App />,
     children: [
-      {
-        path: '',
-        element: <Home />, // Home rendered for the root path "/"
-      },
-      {
-        path: 'weightgain',
-        element: <WeightGain />, // WeightGain rendered for "/weightgain"
-      },
-      {
-        path: 'weightloss',
-        element: <WeightLoss />, // WeightGain rendered for "/weightgain"
-      },
-      {
-        path: 'about',
-        element: <About />, // WeightGain rendered for "/weightgain"
-      },
+      { path: '', element: <Home /> },
+      { path: 'weightgain', element: <WeightGain /> },
+      { path: 'weightloss', element: <WeightLoss /> },
+      { path: 'about', element: <About /> },
     ],
   },
 ]);
 
 createRoot(document.getElementById('root')).render(
   <Auth0Provider
-    domain="health-and-fitness.us.auth0.com"
-    clientId="aIlj2WoZbOs89z7b2HhZ5L0z7HY60rqM"
+    domain={import.meta.env.VITE_AUTH0_DOMAIN}
+    clientId={import.meta.env.VITE_AUTH0_CLIENT_ID}
     authorizationParams={{
-      redirect_uri: window.location.origin,
+      redirect_uri: "https://body-craft-de5w.vercel.app/",
     }}
   >
     <RouterProvider router={router} />

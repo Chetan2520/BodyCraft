@@ -157,18 +157,18 @@ const Navbar = () => {
       >
         {/* Mobile Menu Links */}
         <nav className="flex flex-col text-2xl items-center gap-12  justify-around  space-y-4 p-6">
-          <a href="#" className="hover:text-purple-500">
+          <NavLink to="/" className="hover:text-purple-500">
             Home
-          </a>
-          <a href="#" className="hover:text-purple-500">
+          </NavLink>
+          <NavLink to="/about" className="hover:text-purple-500">
             About
-          </a>
-          <a href="#" className="hover:text-purple-500">
-            Services
-          </a>
-          <a href="#" className="hover:text-purple-500">
-            Contact
-          </a>
+          </NavLink>
+          <NavLink to="/weightgain" className="hover:text-purple-500">
+            WeightGain
+          </NavLink>
+          <NavLink to="/weightloss" className="hover:text-purple-500">
+            WeightLoss
+          </NavLink>
         </nav>
       </aside>
     </header>

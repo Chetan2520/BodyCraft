@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
+import weightGainImg from "./assets/weightgain.png"
+import weightLossImg from "./assets/weight-loss.png"
 const Goal = () => {
   const navigate = useNavigate();
 
@@ -9,11 +10,11 @@ const Goal = () => {
       <h1 className="goal-heading text-4xl font-bold items-center text-center mb-10 md:text-5xl">
         Choose Your Goal
       </h1>
-      <div className="container p-8 flex flex-col gap-20 md:flex-row md:p-20 md:gap-40">
+      <div className="container p-4 flex flex-col gap-20 md:flex-row md:p-20 md:justify-evenly">
         {/* Weight Gain Card */}
         <div className="goal-card weight-gain rounded-2xl border p-7 flex flex-col justify-center items-center gap-4 transition-transform duration-300 transform hover:scale-105 hover:rotate-x-6 hover:translate-y-3 md:p-12">
           <div className="h-24 w-24 rounded-full bg-white">
-            <img src="./src/assets/weightgain.png" alt="Weight Gain" />
+            <img src={weightGainImg} alt="Weight Gain" />
           </div>
           <h1 className="text-2xl font-bold mb-3 md:text-4xl">Weight Gain</h1>
           <p className="text-xs text-slate-300 font-medium md:text-sm md:leading-7">
@@ -36,7 +37,7 @@ const Goal = () => {
         {/* Weight Loss Card */}
         <div className="goal-card weight-loss rounded-2xl border p-7 flex flex-col justify-center items-center gap-4 transition-transform duration-300 transform hover:scale-105 hover:rotate-x-6 hover:translate-y-3 md:p-12">
           <div className="h-24 w-24 rounded-full bg-black">
-            <img src="./src/assets/weight-loss.png" alt="Weight Loss" />
+            <img src={weightLossImg} alt="Weight Loss" />
           </div>
           <h1 className="text-2xl font-bold mb-3 md:text-4xl">Weight Loss</h1>
           <p className="text-xs text-slate-300 font-medium md:text-sm md:leading-7">
