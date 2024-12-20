@@ -43,7 +43,7 @@ const HeroSection = () => {
         sm:p-8 sm:text-4xl 
         md:flex md:justify-center md:items-center md:text-5xl 
         lg:text-6xl lg:p-12">
-        <div className="hero-text text-red-500">
+        <div className="hero-text">
           Let's Transform Your Body with
         </div>
         <span className="hero-title text-3xl bg-gradient-to-b from-white via-purple-500 to-purple-900 bg-clip-text text-transparent 
