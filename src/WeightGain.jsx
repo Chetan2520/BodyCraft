@@ -49,6 +49,9 @@ const WeightGain = () => {
   };
 
   useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+    
     gsap.registerPlugin(ScrollTrigger);
 
     // Hero section animation
@@ -75,7 +78,7 @@ const WeightGain = () => {
       ease: "power3.out",
     });
 
-    // Steps animation
+    // Steps animation - modified to prevent scroll interference
     gsap.from(".step-card", {
       y: 100,
       opacity: 0,
@@ -85,6 +88,10 @@ const WeightGain = () => {
       scrollTrigger: {
         trigger: ".steps-section",
         start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+        preventOverlaps: true,
+        fastScrollEnd: true
       },
     });
 
@@ -105,6 +112,11 @@ const WeightGain = () => {
       repeat: -1,
       yoyo: true,
     });
+
+    // Cleanup function to prevent memory leaks and scroll interference
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   }, []);
 
   return (
